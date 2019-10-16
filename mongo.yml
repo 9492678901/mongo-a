@@ -1,0 +1,25 @@
+---
+- hosts: mongodb
+  become: true
+  tasks:
+        - name: hi
+          yum:
+                name: docker
+                state: present
+        - name: hello
+          service:
+                name: docker
+                enabled: true
+        - name: hi
+          yum:
+                name: python
+                state: present
+        - name: heke
+          yum:
+                name: python-pip
+                state: present
+        - name: sdd
+          docker_container:
+                name: mongodb
+                image: mongo:latest
+
