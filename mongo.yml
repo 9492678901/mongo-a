@@ -1,6 +1,6 @@
 ---
 - hosts: mongodb
-  become: true
+  become: True
   tasks:
         - name: hi
           yum:
